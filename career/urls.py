@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url, include # untuk mengimport library url, dan include dari djanngo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^karyawan/', include('karyawan.urls')) #diambil dari app karyawan dengan nama files urls.py
 ]
